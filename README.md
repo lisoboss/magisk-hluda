@@ -1,12 +1,12 @@
 # MagiskFrida
 
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/ViRb3/magisk-frida/main.yml?branch=master)
-![GitHub repo size](https://img.shields.io/github/repo-size/ViRb3/magisk-frida)
-![GitHub downloads](https://img.shields.io/github/downloads/ViRb3/magisk-frida/total)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/lisoboss/magisk-hluda/main.yml?branch=master)
+![GitHub repo size](https://img.shields.io/github/repo-size/lisoboss/magisk-hluda)
+![GitHub downloads](https://img.shields.io/github/downloads/lisoboss/magisk-hluda/total)
 
 > [Frida](https://frida.re) is a dynamic instrumentation toolkit for developers, reverse-engineers, and security researchers
 
-> [MagiskFrida](README.md) lets you run frida-server on boot with [Magisk](https://github.com/topjohnwu/Magisk)
+> [MagiskHluda](README.md) lets you run hluda-server on boot with [Magisk](https://github.com/topjohnwu/Magisk)
 
 ## Supported architectures
 
@@ -14,13 +14,13 @@
 
 ## Instructions
 
-Install `MagiskFrida.zip` from [the releases](https://github.com/ViRb3/magisk-frida/releases)
+Install `MagiskHluda.zip` from [the releases](https://github.com/lisoboss/magisk-hluda/releases)
 
 > :information_source: Do not use the Magisk repository, it is obsolete and no longer receives updates
 
-## How fast are frida-server updates?
+## How fast are hluda-server updates?
 
-Instant! This module is hooked to the official Frida build process
+Instant! This module is hooked to the [hluda](https://github.com/hzzheyang/strongR-frida-android) build process
 
 ## Issues?
 
@@ -34,4 +34,4 @@ poetry run python main.py
 ```
 
 - Release ZIP will be under `/build`
-- frida-server downloads will be under `/downloads`
+- hluda-server downloads will be under `/downloads`
