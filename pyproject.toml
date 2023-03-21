@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "magisk-frida"
+name = "magisk-hluda"
 version = "1.0.0"
-description = "Run frida-server on boot with Magisk"
+description = "Run hluda-server on boot with Magisk"
 authors = [""]
 
 [tool.poetry.dependencies]

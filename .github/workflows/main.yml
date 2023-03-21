@@ -29,4 +29,4 @@ jobs:
         with:
           artifacts: build/*.zip
           tag: "${{ env.NEW_TAG }}"
-          body: https://github.com/frida/frida/releases
+          body: https://github.com/hzzheyang/strongR-frida-android/releases

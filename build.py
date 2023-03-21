@@ -52,12 +52,12 @@ def extract_file(archive_path: Path, dest_path: Path):
 
 
 def create_module_prop(path: Path, project_tag: str):
-    module_prop = f"""id=magisk-frida
-name=MagiskFrida
+    module_prop = f"""id=magisk-hluda
+name=MagiskHluda
 version={project_tag}
 versionCode={project_tag.replace(".", "").replace("-", "")}
-author=ViRb3
-description=Run frida-server on boot"""
+author=liso
+description=Run hluda-server on boot"""
 
     with open(path.joinpath("module.prop"), "w", newline="\n") as f:
         f.write(module_prop)
@@ -77,20 +77,20 @@ def fill_module(arch: str, frida_tag: str, project_tag: str):
     threading.current_thread().setName(arch)
     logger.info(f"Filling module for arch '{arch}'")
 
-    frida_download_url = f"https://github.com/frida/frida/releases/download/{frida_tag}/"
-    frida_server = f"frida-server-{frida_tag}-android-{arch}.xz"
+    frida_download_url = f"https://github.com/hzzheyang/strongR-frida-android/releases/download/{frida_tag}/"
+    frida_server = f"hluda-server-{frida_tag}-android-{arch}.xz"
     frida_server_path = PATH_DOWNLOADS.joinpath(frida_server)
 
     download_file(frida_download_url + frida_server, frida_server_path)
     files_dir = PATH_BUILD_TMP.joinpath("files")
     files_dir.mkdir(exist_ok=True)
-    extract_file(frida_server_path, files_dir.joinpath(f"frida-server-{arch}"))
+    extract_file(frida_server_path, files_dir.joinpath(f"hluda-server-{arch}"))
 
 
 def package_module(project_tag: str):
     logger.info("Packaging module")
 
-    module_zip = PATH_BUILD.joinpath(f"MagiskFrida-{project_tag}.zip")
+    module_zip = PATH_BUILD.joinpath(f"MagiskHluda-{project_tag}.zip")
 
     with zipfile.ZipFile(module_zip, "w", compression=zipfile.ZIP_DEFLATED) as zf:
         for root, _, files in os.walk(PATH_BUILD_TMP):
